@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+.top_navbar {
+    background: #007A55;
+}
+.top_navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+.search_navbar, .icons_navbar, .user_navbar {
+    display: flex;
+}
+li {
+    margin: 15px;
+}
+.top_navbar a{
+    color: #2F2E2E;
+    background-color: #00A271;
+    padding: 15px;
+    border-radius: 5px;
+}
+.signup_navbar {
+    cursor: pointer;
+    color: #2F2E2E;
+    background-color: #00A271;
+    border-radius: 5px;
+}
+.search-container{
+    background: #fff;
+    height: 30px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.search_navbar:hover > .search-input{
+    width: 400px;
+    background-color: #00A271;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.search_navbar .search-input{
+    background: transparent;
+    border: none;
+    outline:none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+
+}
+
+.search_navbar .search-btn .fas{
+    color: #5cbdbb;
+}
+
+@keyframes hoverShake {
+  0% {transform: skew(0deg,0deg);}
+  25% {transform: skew(5deg, 5deg);}
+  75% {transform: skew(-5deg, -5deg);}
+  100% {transform: skew(0deg,0deg);}
+}
+#form_signup , #form_login {
+    z-index: 10;
+/* border: 1px solid black; */
+    border-radius: 15px;
+    position: absolute;
+    /* top: -550px; */
+    width: 0;
+    height: 0;
+    background: white;
+    margin-top: 5%;
+    margin-left: 35%;
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.5s;
+    visibility: hidden;
+}
+#form_signup.active, #form_login.active {
+    transform: scale(1);
+    opacity: 1;
+    width: 500px;
+    height: 600px;
+    visibility: visible;
+    /* top: 10%;
+    left: 25%; */
+}
+
+
+.wrapper {
+    background: #fff;
+    width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+        0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+
+/* Signup Form CSS Code */
+.form {
+    padding: 25px 30px;
+}
+
+.form header {
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.form form {
+    margin: 20px 0;
+}
+
+.form form .error-txt {
+    color: #721c24;
+    background: #f8d7da;
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #f5c6cb;
+    display: none;
+}
+
+.form form .name-details {
+    display: flex;
+}
+
+form .name-details .field:first-child {
+    margin-right: 10px;
+}
+
+form .name-details .field:last-child {
+    margin-left: 10px;
+}
+
+.form form .field {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form form .field label {
+    margin-bottom: 2px;
+}
+
+.form form .field input {
+    outline: none;
+}
+
+.form form .input input {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form form .image input {
+    font-size: 17px;
+}
+
+.form form .button input {
+    margin-top: 13px;
+    height: 45px;
+    border: none;
+    font-size: 17px;
+    font-weight: 400;
+    background: #024C36;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form form .field i {
+    position: absolute;
+    right: 15px;
+    color: #ccc;
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.form form .field i.active::before {
+    color: #333;
+    content: "\f070";
+}
+
+.form .link {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+.authentification {
+    color: #333;
+    cursor: pointer;
+}
+
+.form .link a:hover {
+    text-decoration: underline;
+}

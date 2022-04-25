@@ -15,7 +15,7 @@ abstract class Model
 
     public function findAll()
     {
-        $stmt1 = $this->pdo->query("SELECT * FROM {$this->table}");
+        $stmt1 = $this->pdo->query("SELECT * FROM {$this->table} WHERE available = 1");
 
         $acteurs = $stmt1->fetchAll();
         return $acteurs;

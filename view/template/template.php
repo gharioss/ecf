@@ -15,7 +15,7 @@
         <nav class="top_navbar">
             <ul>
                 <li>
-                    <a href="#">Bibliothèque</a>
+                    <a href="index.php">Bibliothèque</a>
                 </li>
                 <div class="icons_navbar">
                     <li>
@@ -25,15 +25,21 @@
                         <span><i class="fa-brands fa-twitter"></i></span>
                     </li>
                 </div>
+                <!-- class="search-input" -->
                 <div class="search_navbar">
-                    <input type="text" name="search" placeholder="Search..." class="search-input">
-                    <a href="#" class="search-btn">
-                        <i class="fas fa-search"></i>
-                    </a>
+                    <form action="index.php?controller=articles&task=search" method="POST">
+                        <input type="text" name="searchValue" placeholder="Search...">
+                        <button name="search" class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
                 </div>
 
                 <div class="user_navbar">
-                    <?php session_start();
+                    <?php
+                    if (!isset($_SESSION)) {
+                        session_start();
+                    }
                     if (!isset($_SESSION['is_logged'])) : ?>
                         <li>
                             <div class="signup_navbar" id="signup">
@@ -43,7 +49,18 @@
                     <?php else : ?>
                         <li>
                             <div class="signup_navbar">
-                                <a href="index.php?controller=user&task=logout">
+                                <?php if (!isset($_SESSION)) {
+                                    session_start();
+                                }
+                                if ($_SESSION['is_admin'] == "1") : ?>
+                                    <a href="index.php?controller=user&task=showUsers">
+                                        Admin
+                                    </a>
+                                <?php endif; ?>
+                                <a href="index.php?controller=pret&task=availableIndex">
+                                    Mon compte
+                                </a>
+                                <a href="index.php?controller=user&task=logout" onclick="return window.confirm('Êtes vous sûr de vouloir vous déconnecter ?')">
                                     Se déconnecter
                                 </a>
                             </div>

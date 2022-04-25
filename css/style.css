@@ -26,11 +26,12 @@ li {
     background-color: #00A271;
     padding: 15px;
     border-radius: 5px;
+    margin-right: 20px;
 }
 .signup_navbar {
     cursor: pointer;
     color: #2F2E2E;
-    background-color: #00A271;
+    /* background-color: #00A271; */
     border-radius: 5px;
 }
 .search-container{
@@ -219,4 +220,150 @@ form .name-details .field:last-child {
 
 .form .link a:hover {
     text-decoration: underline;
+}
+
+img {
+    width: 250px;
+    height: 400px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.myaccount {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #CF7C3F ;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.myinfo_user a {
+    color: #fff;
+    font-size: 20px;
+}
+.historique {
+    max-width: 1700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+table,
+td,
+th {
+    border-bottom: 1px solid #ddd;
+    border-collapse: collapse;
+    margin: 50px;
+    max-width: 70%;
+    text-align: center;
+    padding: 15px;
+}
+
+tr {
+    margin: 0px 10px;
+}
+
+tr:hover {
+    background-color: #E1E9E1;
+}
+
+.btnAdd,
+.listMsg,
+.editCom {
+    margin-right: 20px;
+}
+
+.btnUpdate,
+.btnDelete,
+.btnValid {
+    margin: 5px;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btnUpdate,
+.btnValid {
+    background: #B2996B;
+}
+
+.btnDelete {
+    background: #DC143C;
+}
+
+.addRecipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-email,
+.contact-message,
+.add-titre,
+.add-contenu,
+.add-img,
+.add-category,
+.add-email {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-top: 15px;
+}
+
+form .button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.button input {
+    margin-top: 13px;
+    height: 45px;
+    border: none;
+    font-size: 17px;
+    background: #84947B;
+    color: #fff;
+    cursor: pointer;
+}
+
+.list_img {
+    width: 150px;
+    height: 100%;
+}
+
+.research_items{
+    display: flex;
+    justify-content: space-around;
 }
